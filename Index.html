@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learning System Design Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    #right-panel {
+      overflow-y: scroll;
+      height: 100vh;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased h-full">
+
+  <div class="flex max-w-7xl mx-auto h-full">
+    <!-- Left fixed panel -->
+    <aside class="hidden md:flex flex-col justify-between w-1/3 p-12 border-r border-gray-200 sticky top-0 h-screen">
+      <div class="flex flex-col gap-6">
+        <!-- Logo -->
+        <div>
+          <img src="burger-icon.svg" alt="Menu" class="w-6 h-6" />
+        </div>
+        <!-- Headline -->
+        <h1 class="text-4xl font-extrabold leading-tight">
+          Your Partner for <br />Learning System Design
+        </h1>
+        <!-- Subtext -->
+        <p class="text-gray-600 text-lg max-w-sm leading-relaxed">
+          Powerful SaaS platform for instructional designers to build, manage, and deliver performance-driven learning experiences faster and smarter.
+        </p>
+        <!-- Buttons -->
+        <div class="flex gap-4">
+          <button class="bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
+            Start Your Learning Project
+          </button>
+          <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 px-6 rounded-lg transition">
+            Schedule a Demo
+          </button>
+        </div>
+      </div>
+      <!-- Collaborators & clients -->
+      <div class="mt-8 text-gray-600 text-sm flex flex-col gap-4">
+        <div class="flex items-center gap-6">
+          <span>Trusted by organizations like</span>
+          <div class="flex gap-6 items-center">
+            <!-- Placeholder icons -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16.365 1.43c-.584.707-1.208 1.622-1.062 2.583.99.074 2.127-.538 2.81-1.165-.594-.534-1.54-1.17-1.748-1.418zM12 4.5c-2.042 0-3.814 1.116-4.75 2.75C6.516 9.808 8.234 12.1 10 12.1c1.542 0 2.348-1.005 3.524-1.005 1.16 0 2.06 1.005 3.292 1.005 1.015 0 2.688-1.439 2.688-3.575 0-2.32-2.346-5.03-5.5-5.03z"/>
+            </svg>
+            <svg class="w-20 h-6" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="20" font-family="sans-serif" font-weight="700" font-size="18" fill="#000">EduCorp</text>
+            </svg>
+            <svg class="w-16 h-6" viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="20" font-family="sans-serif" font-weight="700" font-size="18" fill="#000">Learnify</text>
+            </svg>
+          </div>
+        </div>
+        <!-- Testimonials -->
+        <div class="space-y-4 text-gray-700 text-sm">
+          <div>
+            <div class="flex items-center gap-1 text-yellow-400">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+            </div>
+            <p>“The platform transformed how we design and deliver training. Our teams are more engaged and productive.”<br />Sarah Liu, L&D Manager at EduCorp</p>
+          </div>
+          <div>
+            <div class="flex items-center gap-1 text-yellow-400">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.66 12.09 1 8.18l6.06-.52L10 2l2.94 5.66 6.06.52-4.66 3.91 1.538 5.999z"/></svg>
+            </div>
+            <p>“The flexibility and ease of use let us focus on what matters: creating effective learning content.”<br />Jason King, Training Lead at Learnify</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right scrollable content -->
+    <main id="right-panel" class="w-full md:w-2/3 h-screen overflow-y-scroll p-10 space-y-20">
+
+      <!-- Navigation -->
+      <nav class="sticky top-0 z-10 w-max ml-auto mb-8 bg-white bg-opacity-30 backdrop-blur p-4 rounded-3xl shadow-md">
+        <a href="#features" class="text-gray-900 font-semibold hover:underline cursor-pointer">Features</a>
+        <a href="#benefits" class="text-gray-900 font-semibold hover:underline cursor-pointer ml-8">Benefits</a>
+        <a href="#process" class="text-gray-900 font-semibold hover:underline cursor-pointer ml-8">Process</a>
+        <a href="#pricing" class="text-gray-900 font-semibold hover:underline cursor-pointer ml-8">Pricing</a>
+      </nav>
+
+      <!-- Mobile Hero Sticky CTA Banner -->
+      <div class="md:hidden w-full top-0 z-20 bg-white bg-opacity-50 px-4 pt-4 pb-6 flex flex-col items-start gap-4">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-snug w-full">
+          Learning System Design<br />Platform for Teams
+        </h1>
+        <p class="text-gray-600 text-base leading-relaxed w-full">
+          Powerful SaaS platform empowering instructional designers to build better learning faster.
+        </p>
+        <div class="flex gap-3 w-full">
+          <button class="flex-1 bg-green-700 hover:bg-green-800 text-white font-semibold py-3 rounded-xl shadow transition">
+            Start Your Project
+          </button>
+          <button class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 rounded-xl transition">
+            Schedule a Demo
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero carousel -->
+      <section id="hero-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-6">
+        <div class="flex-shrink-0 w-64 aspect-[9/16] rounded-3xl shadow-lg overflow-hidden border border-gray-200 snap-start cursor-pointer">
+          <img src="https://via.placeholder.com/360x640?text=Design+Workspace" alt="Learning system workspace screenshot 1" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex-shrink-0 w-64 aspect-[9/16] rounded-3xl shadow-lg overflow-hidden border border-gray-200 snap-start cursor-pointer">
+          <img src="https://via.placeholder.com/360x640?text=Action+Mapping" alt="Learning system action mapping screenshot 2" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex-shrink-0 w-64 aspect-[9/16] rounded-3xl shadow-lg overflow-hidden border border-gray-200 snap-start cursor-pointer">
+          <img src="https://via.placeholder.com/360x640?text=Analytics+Dashboard" alt="Learning system analytics dashboard screenshot 3" class="w-full h-full object-cover" />
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="bg-white max-w-4xl mx-auto mt-20 p-8 rounded-lg shadow-md">
+        <div class="w-1/2">
+          <h2 class="text-3xl font-bold mb-6">Features</h2>
+          <p class="mb-6 text-gray-700">
+            Our platform offers instructional designers everything needed to design, manage, and deliver engaging learning experiences efficiently.<br /><br />
+            From customizable workspaces and collaborative tools to data-driven insights and real-time analytics — all built to support performance-focused learning design.
+          </p>
+          <ul class="list-none space-y-2 text-gray-900 font-semibold">
+            <li>✔ Collaborative Workspace Management</li>
+            <li>✔ Action Mapping & Goal Tracking</li>
+            <li>✔ Story & Scenario Builder</li>
+            <li>✔ Learner Analytics & Reporting</li>
+            <li>✔ Seamless LMS Integration</li>
+          </ul>
+        </div>
+        <div class="w-1/2">
+          <img src="https://framerusercontent.com/images/iZycDWB7mDe3AChMkGOnk8MJI4g.jpg" alt="Instructional design workspace" class="rounded-xl object-cover w-full h-64" />
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section id="benefits" class="grid grid-cols-2 gap-6 max-w-4xl mx-auto mt-20">
+        <h2 class="col-span-2 text-3xl font-bold mb-6">Benefits</h2>
+        <div class="flex items-start gap-4">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <h3 class="font-semibold">Accelerate Design Cycles</h3>
+            <p class="text-gray-600">Cut weeks off your instructional design timeline with streamlined workflows and reusable assets.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="text-2xl">🔍</span>
+          <div>
+            <h3 class="font-semibold">Data-Driven Decisions</h3>
+            <p class="text-gray-600">Gain insights into learner behavior and performance to continuously improve your training programs.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="text-2xl">🤝</span>
+          <div>
+            <h3 class="font-semibold">Collaborate Seamlessly</h3>
+            <p class="text-gray-600">Work effortlessly with SMEs, reviewers, and stakeholders in a centralized workspace.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="text-2xl">🔧</span>
+          <div>
+            <h3 class="font-semibold">Flexible & Scalable</h3>
+            <p class="text-gray-600">Adapt the platform to fit projects of any size, from microlearning to enterprise programs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscription Process Section -->
+<section id="process" class="max-w-4xl mx-auto mt-20">
+  <h2 class="text-3xl font-bold mb-8">How It Works</h2>
+
+  <!-- Timeline wrapper with extra vertical padding -->
+  <div class="relative py-16">
+    
+    <!-- Steps row -->
+    <div class="relative flex justify-between items-start">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center w-1/3">
+        <div class="z-10 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">
+          1
+        </div>
+        <h3 class="font-semibold mb-2">Create Workspace</h3>
+        <p class="text-gray-700">
+          Set up a dedicated project workspace to plan your learning initiatives.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center text-center w-1/3">
+        <div class="z-10 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">
+          2
+        </div>
+        <h3 class="font-semibold mb-2">Design & Collaborate</h3>
+        <p class="text-gray-700">
+          Build action maps, stories, and scenarios while working closely with your team.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center w-1/3">
+        <div class="z-10 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">
+          3
+        </div>
+        <h3 class="font-semibold mb-2">Deploy & Analyze</h3>
+        <p class="text-gray-700">
+          Launch training and track learner progress with real-time analytics to optimize results.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="max-w-4xl mx-auto mt-20 border-t border-gray-300 pt-10">
+        <h2 class="text-3xl font-bold mb-8">Flexible Plans</h2>
+        <div class="grid grid-cols-3 gap-10">
+          <div>
+            <h3 class="font-semibold mb-4">Starter Plan</h3>
+            <p class="mb-4">Ideal for small teams starting out with instructional design projects. Includes workspace access and basic analytics.</p>
+            <p class="text-2xl font-bold mb-2">$299/mo</p>
+          </div>
+          <div class="col-span-2">
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Unlimited project workspaces</li>
+              <li>Action mapping & story builder</li>
+              <li>Basic learner analytics dashboard</li>
+              <li>Email support</li>
+              <li>Collaboration tools for teams</li>
+            </ul>
+            <button class="mt-6 bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 px-6 rounded-lg transition">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / Contact Section -->
+      <section id="about" class="max-w-4xl mx-auto mt-20 flex gap-10 items-center">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Founder photo" class="w-32 h-32 rounded-full" />
+        <div>
+          <p class="mb-4">
+            Hi, I’m Alex.<br /><br />
+            With over a decade of experience in instructional design and learning technology, I created this platform to empower learning professionals to design smarter, faster, and more effectively.<br /><br />
+            Our mission is to make learning system design accessible and impactful for teams of all sizes.<br /><br />
+            If you want to learn more, feel free to reach out!
+          </p>
+          <div class="mb-8">
+            <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 30L80 10" stroke="#555" stroke-width="3" />
+            </svg>
+          </div>
+          <p>Prefer to email? <a href="mailto:hello@learningsystem.com" class="underline text-green-700 hover:text-green-800">hello@learningsystem.com</a></p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="max-w-4xl mx-auto mt-20 space-y-4">
+        <details class="border-b border-gray-300 pb-4">
+          <summary class="cursor-pointer font-semibold text-lg">Why use this learning system?</summary>
+          <p class="mt-2 text-gray-700">
+            It streamlines instructional design processes, centralizes collaboration, and leverages data to improve learner outcomes.
+          </p>
+        </details>
+        <details class="border-b border-gray-300 pb-4">
+          <summary class="cursor-pointer font-semibold text-lg">How do I onboard my team?</summary>
+          <p class="mt-2 text-gray-700">
+            We offer guided onboarding sessions and comprehensive resources to get your team started quickly.
+          </p>
+        </details>
+        <details class="border-b border-gray-300 pb-4">
+          <summary class="cursor-pointer font-semibold text-lg">Can I integrate with existing LMS?</summary>
+          <p class="mt-2 text-gray-700">
+            Yes, our platform supports seamless integrations with popular LMS and analytics tools.
+          </p>
+        </details>
+        <details class="border-b border-gray-300 pb-4">
+          <summary class="cursor-pointer font-semibold text-lg">What if I need custom features?</summary>
+          <p class="mt-2 text-gray-700">
+            We offer custom development and consulting to tailor the platform to your unique needs.
+          </p>
+        </details>
+
+        <footer class="mt-20 flex justify-between text-gray-500 text-sm">
+          <span>• Jul 4, 2025</span>
+          <span>Global Headquarters</span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
